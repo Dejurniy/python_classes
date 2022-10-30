@@ -49,3 +49,21 @@ third_mth = Dict("", {"key1": 1, "key2": 2, "key3": 10, "key4": 14, "key5": 18},
 Dict.convert(first_mth)
 Dict.no_dups(second_mth)
 Dict.highest(third_mth)
+
+
+class Circle:
+
+    def __init__(self, P, r):
+        self.P = P
+        self.r = r
+
+    def circle_area(self):
+        return self.P * self.r ** 2
+
+    def circle_perimeter(self):
+        return 2 * self.P * self.r
+
+
+area_ = Circle(3.14, 7)
+print("The area of the circle is:", Circle.circle_area(area_))
+print("The perimeter of the circle is:", Circle.circle_perimeter(area_))
