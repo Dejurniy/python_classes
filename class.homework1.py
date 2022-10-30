@@ -16,9 +16,6 @@ class Dict:
             if cr not in self.dict:
                 self.dict[cr] = 1
 
-            else:
-                self.dict[cr] += 1
-
         print(self.dict)
 
     # Second method
