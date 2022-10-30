@@ -58,12 +58,20 @@ class Circle:
         self.r = r
 
     def circle_area(self):
+        """
+        This method computes the area of the circle!
+        """
+
         return self.P * self.r ** 2
 
     def circle_perimeter(self):
+        """
+        This method computes the perimeter of circle!
+        """
+
         return 2 * self.P * self.r
 
 
-area_ = Circle(3.14, 7)
-print("The area of the circle is:", Circle.circle_area(area_))
-print("The perimeter of the circle is:", Circle.circle_perimeter(area_))
+circle = Circle(3.14, 7)
+print("The area of the circle is:", Circle.circle_area(circle))
+print("The perimeter of the circle is:", Circle.circle_perimeter(circle))
