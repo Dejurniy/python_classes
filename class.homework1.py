@@ -66,7 +66,7 @@ class Circle:
 
         return self.P * self.r ** 2
 
-    def circle_perimeter(self):
+    def circle_perimeter_(self):
         """
         This method computes the perimeter of circle!
         """
@@ -76,4 +76,4 @@ class Circle:
 
 circle = Circle(3.14, 7)
 print("The area of the circle is:", Circle.circle_area(circle))
-print("The perimeter of the circle is:", Circle.circle_perimeter(circle))
+print("The perimeter of the circle is:", Circle.circle_perimeter_(circle))
