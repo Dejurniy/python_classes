@@ -81,20 +81,21 @@
 # Actor.best_one(actor1)
 
 
-string_ = "python"
-dic = {}
+# string_ = "python"
+# dic = {}
+#
+# for cr in string_:
+#
+#     if cr not in dic:
+#         dic[cr] = 1
+#
+#     else:
+#         dic[cr] += 1
+#
+# print(dic)
 
-for cr in string_:
-
-    if cr not in dic:
-        dic[cr] = 1
-
-    else:
-        dic[cr] += 1
-
-print(dic)
-
-
+class Circle:
+    def __init__(self, radius):
 
 
 

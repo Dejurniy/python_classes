@@ -36,10 +36,12 @@ class Dict:
         """
         This method returns the highest 3 values in a dictionary!
         """
+        max_ = 0
 
         for key, value in self.dict.items():
-            if value > 5:
-                print(key)
+            if max_ < value:
+                max_ = value
+                print(max_)
 
 
 first_mth = Dict("python", {}, {})
