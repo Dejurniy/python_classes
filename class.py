@@ -95,7 +95,7 @@
 # print(dic)
 
 class Circle:
-    def __init__(self, radius):
+    def __init__(self):
 
 
 
