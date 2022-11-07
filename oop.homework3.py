@@ -1,56 +1,59 @@
 # Ex. 1
-# class Country:
-#     def __init__(self, name, continent):
-#         self.name = name
-#         self.continent = continent
-#
-#     def present(self):
-#         return f"The brand's country is {self.name}, which is located in {self.continent}."
-#
-#
-# class Brand:
-#     def __init__(self, brand, date):
-#         self.brand = brand
-#         self.date = date
-#
-#     def present(self):
-#         return f"So the brand is {self.brand} and it's founded in {self.date}"
-#
-#
-# class Season:
-#     def __init__(self, season):
-#         self.season = season
-#
-#     def present(self):
-#         return f"This brand is {self.season} clothing brand!"
-#
-#
-# class Product(Country, Brand, Season):
-#     def __init__(self, pr_name, pr_type, pr_price, pr_quantity, percent, *args, **kwargs):
-#         self.product = pr_name
-#         self.type = pr_type
-#         self.price = pr_price
-#         self.quantity = pr_quantity
-#         self.percent = percent
-#         super().__init__(*args, **kwargs)
-#
-#     def discount(self):
-#         return self.price - (self.price * self.percent) / 100
-#
-# def present(self): return f"The product name is {self.product} which type is {self.type}. The price of the product
-# is {self.price}$. " \ f"{self.quantity} shoes are left! " \ f"If you want a discount we can offer {self.percent}%.
-# It would be from {self.price}$ to {self.discount()}$"
-#
-#
-# cn = Country("France", "Europe")
-# br = Brand("Balenciaga", 1919)
-# se = Season("all seasons")
-# pr = Product("Triple S Trainers", "Sneakers", 450, 32, 10, "", "")
+class Country:
+    def __init__(self, name, continent):
+        self.name = name
+        self.continent = continent
 
-# print(Country.present(cn))
-# print(Brand.present(br))
-# print(Season.present(se))
-# print(Product.present(pr))
+    def present(self):
+        return f"The brand's country is {self.name}, which is located in {self.continent}."
+
+
+class Brand:
+    def __init__(self, brand, date):
+        self.brand = brand
+        self.date = date
+
+    def present(self):
+        return f"So the brand is {self.brand} and it's founded in {self.date}"
+
+
+class Season:
+    def __init__(self, season):
+        self.season = season
+
+    def present(self):
+        return f"This brand is {self.season} clothing brand!"
+
+
+class Product(Country, Brand, Season):
+    def __init__(self, pr_name, pr_type, pr_price, pr_quantity, percent, *args, **kwargs):
+        self.product = pr_name
+        self.type = pr_type
+        self.price = pr_price
+        self.quantity = pr_quantity
+        self.percent = percent
+        super().__init__(*args, **kwargs)
+
+    def discount(self):
+        return self.price - (self.price * self.percent) / 100
+
+    def present(self):
+        return f"The product name is {self.product} which type is {self.type}. The price of the product is {self.price}$. " \
+               f"{self.quantity} shoes are left! " \
+               f"If you want a discount we can offer {self.percent}%." \
+               f"It would be from {self.price}$ to {self.discount()}$ "
+
+
+
+cn = Country("France", "Europe")
+br = Brand("Balenciaga", 1919)
+se = Season("all seasons")
+pr = Product("Triple S Trainers", "Sneakers", 450, 32, 10, "", "")
+
+print(Country.present(cn))
+print(Brand.present(br))
+print(Season.present(se))
+print(Product.present(pr))
 
 
 # Ex. 2
