@@ -12,22 +12,8 @@ file2_path = os.path.join(os.getcwd(), "dir_1", "file2.txt")
 
 # Ex. 1
 
-num1 = 0
-num2 = 0
-dict_ = {}
-with open(file_path, "r") as file:
-    for line in file:
-        num1 += 1
-        for digit in line:
-            if digit.isdigit():
-                num2 += 1
-        dict_[num1] = num2
-        num2 = 0
 
-
-print(dict_)
-
-# Ex. 2
+# # Ex. 2
 
 user_num = input("Write a number: ")
 num_ = 0
@@ -51,7 +37,7 @@ with open(file_path, "r") as file:
             list_.append(letter)
 
 print("Special words are:", list_)
-
+#
 
 # Ex. 4
 string = ""
@@ -62,7 +48,7 @@ with open(file_path, "r") as file:
             if letter.isalpha():
                 string += letter
 
-with open(file2_path, "a") as file2:
+with open(file2_path, "w") as file2:
     file2.write(string)
 
 
