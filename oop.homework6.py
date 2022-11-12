@@ -8,7 +8,7 @@ with open("sample.json", "r") as js_file:
 
 
 with open("user_js.txt", "w") as user_js:
-    data = user_js.write(text)
+    json.dump(text, user_js, indent=4)
 
 
 # Ex. 2
@@ -33,7 +33,7 @@ with open("user.yaml") as y_file:
     text = yaml.safe_load(y_file)
 
 with open("user_yaml.txt", "w") as yml_txt:
-    yml_txt.write(text)
+    yaml.dump(text, yml_txt)
 
 
 
