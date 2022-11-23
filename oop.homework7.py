@@ -35,4 +35,4 @@ class ImageDownloader:
 a = ImageDownloader(json_path="images.json")
 # print(a.download_all())
 a.download_with_threads()
-# a.download_all()
+a.download_all()
