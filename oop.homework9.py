@@ -34,4 +34,3 @@ def quotes_generator(url):
 g_2 = quotes_generator("https://zenquotes.io/api/random")
 print(next(g_2))
 print(next(g_2))
-print(next(g_2))
