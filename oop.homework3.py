@@ -44,7 +44,6 @@ class Product(Country, Brand, Season):
                f"It would be from {self.price}$ to {self.discount()}$ "
 
 
-
 cn = Country("France", "Europe")
 br = Brand("Balenciaga", 1919)
 se = Season("all seasons")
@@ -125,7 +124,7 @@ class Tour(Hotel, Taxi):
 
     def present(self):
         return f"{Hotel.present(self)}\n {Hotel.discount(self)}\n {Hotel.available_rooms(self)}\n {Hotel.booking_lux(self)}\n " \
-               f"{Taxi.present(self)}\n "\
+               f"{Taxi.present(self)}\n " \
                f"So for all lux staff the price is {self.for_lux()}$ and for mid is {self.for_mid()}$"
 
 

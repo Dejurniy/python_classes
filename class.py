@@ -171,52 +171,242 @@
 
 
 import json
+import random
 
-users = []
+# users = []
+#
+# while True:
+#     input_ = input("Name. Surname: ")
+#     name = input_.split()[0]
+#     surname = input_.split()[1]
+#     dict_ = dict(
+#         name=name,
+#         surname=surname
+#     )
+#     users.append(dict_)
+#
+#     check = input("Enough? Type yes for exit. ")
+#     if check == "yes":
+#         break
+#
+# with open("user_list.txt", "w") as file:
+#     for item in range(len(users)):
+#         file.write(f"{item + 1}: {users[item]}\n")
+#
+# users = []
+#
+# with open("user_list.txt") as list_user:
+#     for line in list_user:
+#         print(line.strip())
+#         # 1: {'name': 'John', 'surname': 'Don'} =>
+#         # => 1: {name: John, surname: Don} => name: John, surname: Don} => name: John, surname: Don
+#         str_dict = line.replace("'", "").split("{")[1].split("}")[0]
+#         print(str_dict)
+#
+#         list_strings = str_dict.split(", ")  # name: John, surname: Don => ["name: John", "surname: Don"]
+#         print(list_strings)
+#
+#         user_list = []
+#         for item in list_strings:
+#             user_list.append(item.split(": ")[1]) # in first circle item = "name: John"  in second circle "surname: Don"
+#
+#         print(user_list)  # ['John', 'Don']
+#
+#         dict_ = dict(
+#             name=user_list[0],  # 'John'
+#             surname=user_list[1]  # 'Don'
+#         )
+#         users.append(dict_)
+# print(users)
+#
+# with open("user.json", "w") as json_:
+#     json.dump(users, json_, indent=3)
 
-while True:
-    input_ = input("Name. Surname: ")
-    name = input_.split()[0]
-    surname = input_.split()[1]
-    dict_ = dict(
-        name=name,
-        surname=surname
-    )
-    users.append(dict_)
 
-    check = input("Enough? Type yes for exit. ")
-    if check == "yes":
-        break
+# from datetime import datetime
+#
+# this_year = datetime.now().year
+# this_month = datetime.now().month
+# print(this_year)
+#
+#
+# year_dict = dict(
+#     year=this_year,
+#     month=this_month
+#
+# )
+#
+# with open("data.json", "w") as data_json:
+#     json.dump(year_dict, data_json, indent=4)
 
-with open("user_list.txt", "w") as file:
-    for item in range(len(users)):
-        file.write(f"{item + 1}: {users[item]}\n")
+# import json
+import requests
+# import pprint
 
-users = []
 
-with open("user_list.txt") as list_user:
-    for line in list_user:
-        print(line.strip())
-        # 1: {'name': 'John', 'surname': 'Don'} =>
-        # => 1: {name: John, surname: Don} => name: John, surname: Don} => name: John, surname: Don
-        str_dict = line.replace("'", "").split("{")[1].split("}")[0]
-        print(str_dict)
+# def download_image(image):
+#     response = requests.get(image)
+#
+#     with open("image.png", "wb") as img:
+#         img.write(response.content)
+#
+#
+# download_image(image=)
 
-        list_strings = str_dict.split(", ")  # name: John, surname: Don => ["name: John", "surname: Don"]
-        print(list_strings)
 
-        user_list = []
-        for item in list_strings:
-            user_list.append(item.split(": ")[1]) # in first circle item = "name: John"  in second circle "surname: Don"
+# response = requests.get('https://xkcd.com/')
+# print(response.url)
 
-        print(user_list)  # ['John', 'Don']
+# url_path = "https://api.isevenapi.xyz/api/iseven"
+# response = requests.get(f"{url_path}/{7}/")
+# r = response.json()
+# pprint.pprint(r)
 
-        dict_ = dict(
-            name=user_list[0],  # 'John'
-            surname=user_list[1]  # 'Don'
-        )
-        users.append(dict_)
-print(users)
+# params = {"name": "python", "school": "BITC"}
+# path = "https://www.youtube.com/watch"
+# response_ = requests.get("https://www.youtube.com/watch/", params=params)
+# n = response_.json()
+# print(n)
+# print(response_.url)
+# print(response_.text)
+# response = requests.get("https://www.pinterest.com")
+# print(response)
+#
+# print(response.json())
 
-with open("user.json", "w") as json_:
-    json.dump(users, json_, indent=3)
+
+# def download_image(url, name):
+#     try:
+#         response_ = requests.get(url)
+#     except Exception as err:
+#         print(f"smth happened {err}")
+#         return
+
+import threading
+import json
+import requests
+import datetime
+import time
+
+
+# def func_1():
+#     for item in range(11):
+#         time.sleep(0.1)
+#         print(item)
+
+
+# if __name__ == "__main__":
+#     print(__name__, "threading")
+# starting_time = datetime.datetime.today()
+# print(starting_time)
+
+# for i in range(4):
+#     func_1()
+#
+# t = (datetime.today() - starting_time).seconds
+#
+# print(f"it took {t} seconds.")
+
+# Using threads
+
+# for i in range(4):
+#     x = threading.Thread(target=func_1())
+#     x.start()
+#
+# t = (datetime.datetime.today() - starting_time).seconds
+#
+# print(f"it took {t} seconds.")
+
+
+# thread_list = []
+# for i in range(3):
+#     x = threading.Thread(target=func_1)
+#     thread_list.append(x)
+#     x.start()
+#
+# for thread in thread_list:
+#     thread.join()
+# t = (datetime.datetime.today() - starting_time).seconds
+# print(f"it took {t} seconds.")
+
+# def countdown(word):
+#     for char in word:
+#         yield char.upper()
+#
+#
+# g_1 = countdown("hello")
+# # print(next(g_1))
+# # print(next(g_1))
+# # print(next(g_1))
+# for item in g_1:
+#     print(item)
+
+# def even_digits(num):
+#     check = True
+#     while check:
+#         even_num = random.randint(0, num)
+#         if even_num % 2 != 0:
+#             even_num += 1
+#         yield even_num
+#
+#
+# g_2 = even_digits(1000)
+# print(next(g_2))
+# print(next(g_2))
+# print(next(g_2))
+
+# for num in g_2:
+#     print(num)
+
+
+# import json
+# import requests
+# import threading
+#
+#
+# class ImgDownloader:
+#     def __init__(self, path):
+#         with open(path) as file:
+#             self.image = json.load(file)
+#
+#     def download(self, url, name):
+#         response = requests.get(url)
+#         with open(f"{name}.png", "wb") as img:
+#             img.write(response.content)
+#             print(f"Image {name} is downloaded")
+#
+#     def with_threads(self):
+#         thread_list = []
+#         for image in self.image:
+#             x = threading.Thread(target=self.download, args=(image["image_url"], image["url_name"]))
+#             thread_list.append(x)
+#             x.start()
+#
+#         for td in thread_list:
+#             td.join()
+#
+#
+# a = ImgDownloader(path="images.json")
+# a.with_threads()
+
+
+def decorator(func: callable) -> callable:
+    print("Decorated!")
+
+    def decor():
+        print("----------")
+
+        func()
+
+        print("---finished---")
+
+    return decor
+
+
+@decorator
+def text():
+    print("Hello world!!!")
+
+
+text()
+
